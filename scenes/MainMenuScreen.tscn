@@ -1,0 +1,143 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/Buttons_Sliders/Exit.png" type="Texture" id=1]
+[ext_resource path="res://assets/Display/Logo_new.png" type="Texture" id=2]
+[ext_resource path="res://assets/Display/Background.png" type="Texture" id=3]
+[ext_resource path="res://assets/Buttons_Sliders/Play Katakana.png" type="Texture" id=4]
+[ext_resource path="res://assets/Buttons_Sliders/Scoreboard.png" type="Texture" id=5]
+[ext_resource path="res://assets/Buttons_Sliders/Play Hiragana.png" type="Texture" id=6]
+[ext_resource path="res://assets/Buttons_Sliders/Compendium.png" type="Texture" id=7]
+[ext_resource path="res://assets/Buttons_Sliders/Settings.png" type="Texture" id=8]
+[ext_resource path="res://scripts/ScreenSwitchButton.gd" type="Script" id=9]
+
+[node name="MainMenuScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LogoFull" type="TextureRect" parent="."]
+anchor_left = 0.298828
+anchor_top = 0.0483333
+anchor_right = 0.669922
+anchor_bottom = 0.26
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="PlayHiraganaButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = -63.0
+margin_right = 125.0
+margin_bottom = 63.0
+icon = ExtResource( 6 )
+flat = true
+expand_icon = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+scene_path = "res://scenes/Level01.tscn"
+
+[node name="PlayKatakanaButton" type="Button" parent="."]
+anchor_left = 0.376953
+anchor_top = 0.65
+anchor_right = 0.624023
+anchor_bottom = 0.856667
+icon = ExtResource( 4 )
+flat = true
+expand_icon = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+scene_path = "res://scenes/Level01.tscn"
+
+[node name="ScoreButton" type="Button" parent="."]
+anchor_left = 0.0351563
+anchor_top = 0.505
+anchor_right = 0.167969
+anchor_bottom = 0.626667
+icon = ExtResource( 5 )
+flat = true
+expand_icon = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+node_path = "../SettingsTab"
+
+[node name="CompButton" type="Button" parent="."]
+anchor_left = 0.0351563
+anchor_top = 0.65
+anchor_right = 0.167969
+anchor_bottom = 0.761667
+icon = ExtResource( 7 )
+flat = true
+expand_icon = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+node_path = "../SettingsTab"
+
+[node name="SettingsButton" type="Button" parent="."]
+anchor_left = 0.0351563
+anchor_top = 0.783333
+anchor_right = 0.167969
+anchor_bottom = 0.91
+icon = ExtResource( 8 )
+flat = true
+expand_icon = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+node_path = "../SettingsTab"
+
+[node name="ExitButton" type="Button" parent="."]
+anchor_left = 0.757813
+anchor_top = 0.801667
+anchor_right = 0.915039
+anchor_bottom = 0.936667
+icon = ExtResource( 1 )
+flat = true
+expand_icon = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+node_path = "../SettingsTab"
+
+[node name="SettingsTab" type="TabContainer" parent="."]
+anchor_left = 0.735352
+anchor_top = 0.158333
+anchor_right = 0.958984
+anchor_bottom = 0.473333
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[connection signal="button_up" from="PlayHiraganaButton" to="PlayHiraganaButton" method="_on_SceneButton_button_up"]
+[connection signal="button_up" from="PlayKatakanaButton" to="PlayHiraganaButton" method="_on_SceneButton_button_up"]
+[connection signal="button_up" from="ScoreButton" to="ScoreButton" method="_on_TabButton_button_up"]
+[connection signal="button_up" from="CompButton" to="CompButton" method="_on_TabButton_button_up"]
+[connection signal="button_up" from="SettingsButton" to="SettingsButton" method="_on_TabButton_button_up"]
+[connection signal="button_up" from="ExitButton" to="ExitButton" method="_on_ExitButton_button_up"]
