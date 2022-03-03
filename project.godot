@@ -15,6 +15,11 @@ config/description="Kanaka: A hiragana and katakana learning game"
 run/main_scene="res://scenes/MainMenuScreen.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Settings="*res://scripts/Settings.gd"
+Scoreboard="*res://scripts/Scoreboard.gd"
+
 [input]
 
 on_left_click={
