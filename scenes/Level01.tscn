@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/Display/Background.png" type="Texture" id=1]
 [ext_resource path="res://scripts/ScreenSwitchButton.gd" type="Script" id=2]
 [ext_resource path="res://assets/Buttons_Sliders/Pause.png" type="Texture" id=3]
+[ext_resource path="res://assets/Gameplay/Basket.png" type="Texture" id=4]
 
 [node name="Level01" type="Node2D"]
 
@@ -27,5 +28,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 scene_path = "res://scenes/GameOverSreen.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 439.883
+margin_top = 488.271
+margin_right = 595.883
+margin_bottom = 565.271
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="button_up" from="PauseButton" to="PauseButton" method="_on_PauseButton_button_up"]

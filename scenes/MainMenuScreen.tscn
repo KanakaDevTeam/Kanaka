@@ -113,10 +113,10 @@ __meta__ = {
 node_path = "../SettingsTab"
 
 [node name="ExitButton" type="Button" parent="."]
-anchor_left = 0.757813
-anchor_top = 0.801667
-anchor_right = 0.915039
-anchor_bottom = 0.936667
+anchor_left = 0.765625
+anchor_top = 0.778333
+anchor_right = 0.964844
+anchor_bottom = 0.948333
 icon = ExtResource( 1 )
 flat = true
 expand_icon = true
@@ -127,17 +127,18 @@ __meta__ = {
 node_path = "../SettingsTab"
 
 [node name="SettingsTab" type="TabContainer" parent="."]
-anchor_left = 0.735352
-anchor_top = 0.158333
-anchor_right = 0.958984
-anchor_bottom = 0.473333
+visible = false
+anchor_left = 0.657755
+anchor_top = 0.297829
+anchor_right = 0.881387
+anchor_bottom = 0.612829
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [connection signal="button_up" from="PlayHiraganaButton" to="PlayHiraganaButton" method="_on_SceneButton_button_up"]
 [connection signal="button_up" from="PlayKatakanaButton" to="PlayHiraganaButton" method="_on_SceneButton_button_up"]
-[connection signal="button_up" from="ScoreButton" to="ScoreButton" method="_on_TabButton_button_up"]
-[connection signal="button_up" from="CompButton" to="CompButton" method="_on_TabButton_button_up"]
-[connection signal="button_up" from="SettingsButton" to="SettingsButton" method="_on_TabButton_button_up"]
+[connection signal="pressed" from="ScoreButton" to="ScoreButton" method="_on_ScoreButton_pressed"]
+[connection signal="pressed" from="CompButton" to="CompButton" method="_on_CompButton_pressed"]
+[connection signal="pressed" from="SettingsButton" to="SettingsButton" method="_on_SettingsButton_pressed"]
 [connection signal="button_up" from="ExitButton" to="ExitButton" method="_on_ExitButton_button_up"]
