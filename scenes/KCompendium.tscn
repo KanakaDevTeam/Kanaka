@@ -1,15 +1,16 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/Display/Background.png" type="Texture" id=1]
+[ext_resource path="res://assets/Display/background.png" type="Texture" id=1]
 [ext_resource path="res://assets/Buttons_Sliders/Left.png" type="Texture" id=2]
-[ext_resource path="res://scripts/Back.gd" type="Script" id=3]
+[ext_resource path="res://scripts/ScreenSwitchButton.gd" type="Script" id=3]
 [ext_resource path="res://assets/Compendium/Katakana.png" type="Texture" id=4]
 [ext_resource path="res://assets/Kana/Hiragana/Vowels/A.png" type="Texture" id=5]
-[ext_resource path="res://scripts/CompendiumSwitch.gd" type="Script" id=6]
+[ext_resource path="res://scripts/Compendium.gd" type="Script" id=6]
 
 [node name="Compendium" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -20,42 +21,50 @@ anchor_bottom = 1.0
 texture = ExtResource( 1 )
 expand = true
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Back" type="Button" parent="."]
-margin_left = 4.14929
-margin_top = -20.5074
-margin_right = 144.149
-margin_bottom = 136.493
+anchor_left = 0.00405204
+anchor_top = -0.034179
+anchor_right = 0.140771
+anchor_bottom = 0.227488
 icon = ExtResource( 2 )
 flat = true
 expand_icon = true
 script = ExtResource( 3 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
+scene_path = "res://scenes/MainMenuScreen.tscn"
 
 [node name="Katakana" type="TextureRect" parent="."]
-margin_left = 267.0
-margin_top = 63.0
-margin_right = 743.0
-margin_bottom = 539.0
+anchor_left = 0.260742
+anchor_top = 0.105
+anchor_right = 0.725586
+anchor_bottom = 0.898333
+margin_top = 3.8147e-06
 texture = ExtResource( 4 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="SwitchtoHiragana" type="Button" parent="Katakana"]
-margin_left = 29.836
-margin_top = -2.0
-margin_right = 92.836
-margin_bottom = 60.0
+anchor_left = 0.0626807
+anchor_top = -0.00420168
+anchor_right = 0.195034
+anchor_bottom = 0.12605
+margin_left = -1.90735e-06
+margin_bottom = -3.8147e-06
 icon = ExtResource( 5 )
 flat = true
 expand_icon = true
-script = ExtResource( 6 )
+script = ExtResource( 3 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
+scene_path = "res://scenes/HCompendium.tscn"
 
-[connection signal="pressed" from="Back" to="Back" method="_on_Back_pressed"]
-[connection signal="pressed" from="Katakana/SwitchtoHiragana" to="Katakana/SwitchtoHiragana" method="_on_SwitchtoHiragana_pressed"]
+[connection signal="pressed" from="Back" to="Back" method="_on_SceneButton_pressed"]
+[connection signal="pressed" from="Katakana/SwitchtoHiragana" to="Katakana/SwitchtoHiragana" method="_on_SceneButton_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/Display/Background.png" type="Texture" id=1]
+[ext_resource path="res://assets/Display/background.png" type="Texture" id=1]
 [ext_resource path="res://scripts/ScreenSwitchButton.gd" type="Script" id=2]
 [ext_resource path="res://assets/Buttons_Sliders/Pause.png" type="Texture" id=3]
 [ext_resource path="res://assets/Gameplay/Basket.png" type="Texture" id=4]
@@ -40,4 +40,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="button_up" from="PauseButton" to="PauseButton" method="_on_PauseButton_button_up"]
+[connection signal="pressed" from="PauseButton" to="PauseButton" method="_on_PauseButton_pressed"]

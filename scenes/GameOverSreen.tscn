@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/Buttons_Sliders/Main Menu Button.png" type="Texture" id=1]
 [ext_resource path="res://assets/Buttons_Sliders/Play Again.png" type="Texture" id=2]
-[ext_resource path="res://assets/Display/Background.png" type="Texture" id=3]
+[ext_resource path="res://assets/Display/background.png" type="Texture" id=3]
 [ext_resource path="res://scripts/ScreenSwitchButton.gd" type="Script" id=9]
 
 [node name="MainMenuScreen" type="Control"]
@@ -69,5 +69,5 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[connection signal="button_up" from="PlayAgainButton" to="PlayAgainButton" method="_on_SceneButton_button_up"]
-[connection signal="button_up" from="MainMenuButton" to="MainMenuButton" method="_on_SceneButton_button_up"]
+[connection signal="pressed" from="PlayAgainButton" to="PlayAgainButton" method="_on_SceneButton_pressed"]
+[connection signal="pressed" from="MainMenuButton" to="MainMenuButton" method="_on_SceneButton_pressed"]
