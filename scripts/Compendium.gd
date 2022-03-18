@@ -3,7 +3,11 @@ extends Node
 export(ButtonGroup) var group
 
 var on_state = preload("res://assets/Buttons_Sliders/Pause.png")
-
+var setToTrue = 0
 func _on_EnableALL_pressed():
-	for i in group.get_buttons():
-		i.texture_normal = on_state
+    var parent = get_node("Kana").get_children()
+    for i in parent:
+        if i is TextureButton:
+            i.pressed = setToTrue
+    setToTrue = !setToTrue
+    print(parent)

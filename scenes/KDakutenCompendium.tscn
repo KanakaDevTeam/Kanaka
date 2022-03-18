@@ -72,7 +72,7 @@ __meta__ = {
 }
 scene_path = "res://scenes/MainMenuScreen.tscn"
 
-[node name="Katakana" type="TextureRect" parent="."]
+[node name="Kana" type="TextureRect" parent="."]
 anchor_left = 0.15918
 anchor_top = 0.105
 anchor_right = 0.920898
@@ -84,7 +84,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="SwitchtoHiragana" type="Button" parent="Katakana"]
+[node name="SwitchtoHiragana" type="Button" parent="Kana"]
 anchor_left = 0.0626807
 anchor_top = -0.00420168
 anchor_right = 0.195034
@@ -102,7 +102,7 @@ __meta__ = {
 }
 scene_path = "res://scenes/HCompendium.tscn"
 
-[node name="ヤ" type="TextureButton" parent="Katakana"]
+[node name="ヤ" type="TextureButton" parent="Kana"]
 anchor_left = 0.0628205
 anchor_top = 0.168
 anchor_right = 0.152564
@@ -110,7 +110,6 @@ anchor_bottom = 0.308
 margin_right = 7.62939e-06
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -118,7 +117,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ユ" type="TextureButton" parent="Katakana"]
+[node name="ユ" type="TextureButton" parent="Kana"]
 anchor_left = 0.0628205
 anchor_top = 0.488
 anchor_right = 0.152564
@@ -126,7 +125,6 @@ anchor_bottom = 0.628
 margin_right = 7.62939e-06
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 16 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -134,7 +132,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ヨ" type="TextureButton" parent="Katakana"]
+[node name="ヨ" type="TextureButton" parent="Kana"]
 anchor_left = 0.0628205
 anchor_top = 0.808
 anchor_right = 0.152564
@@ -142,7 +140,6 @@ anchor_bottom = 0.948
 margin_right = 7.62939e-06
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 12 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -150,14 +147,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ワ" type="TextureButton" parent="Katakana"]
+[node name="ワ" type="TextureButton" parent="Kana"]
 anchor_left = 0.174359
 anchor_top = 0.168
 anchor_right = 0.264102
 anchor_bottom = 0.308
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 17 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -165,14 +161,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ヲ" type="TextureButton" parent="Katakana"]
+[node name="ヲ" type="TextureButton" parent="Kana"]
 anchor_left = 0.174359
 anchor_top = 0.808
 anchor_right = 0.264102
 anchor_bottom = 0.948
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 13 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -180,14 +175,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ン" type="TextureButton" parent="Katakana"]
+[node name="ン" type="TextureButton" parent="Kana"]
 anchor_left = 0.285897
 anchor_top = 0.168
 anchor_right = 0.375641
 anchor_bottom = 0.308
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -195,14 +189,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ガ" type="TextureButton" parent="Katakana"]
+[node name="ガ" type="TextureButton" parent="Kana"]
 anchor_left = 0.397436
 anchor_top = 0.168
 anchor_right = 0.487179
 anchor_bottom = 0.308
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -210,14 +203,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ギ" type="TextureButton" parent="Katakana"]
+[node name="ギ" type="TextureButton" parent="Kana"]
 anchor_left = 0.397436
 anchor_top = 0.328
 anchor_right = 0.487179
 anchor_bottom = 0.468
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 23 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -225,14 +217,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="グ" type="TextureButton" parent="Katakana"]
+[node name="グ" type="TextureButton" parent="Kana"]
 anchor_left = 0.397436
 anchor_top = 0.488
 anchor_right = 0.487179
 anchor_bottom = 0.628
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 19 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -240,14 +231,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ゲ" type="TextureButton" parent="Katakana"]
+[node name="ゲ" type="TextureButton" parent="Kana"]
 anchor_left = 0.397436
 anchor_top = 0.648
 anchor_right = 0.487179
 anchor_bottom = 0.788
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 18 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -255,14 +245,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ゴ" type="TextureButton" parent="Katakana"]
+[node name="ゴ" type="TextureButton" parent="Kana"]
 anchor_left = 0.397436
 anchor_top = 0.808
 anchor_right = 0.487179
 anchor_bottom = 0.948
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 21 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -270,14 +259,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ザ" type="TextureButton" parent="Katakana"]
+[node name="ザ" type="TextureButton" parent="Kana"]
 anchor_left = 0.508974
 anchor_top = 0.168
 anchor_right = 0.598718
 anchor_bottom = 0.308
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -285,14 +273,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ジ" type="TextureButton" parent="Katakana"]
+[node name="ジ" type="TextureButton" parent="Kana"]
 anchor_left = 0.508974
 anchor_top = 0.328
 anchor_right = 0.598718
 anchor_bottom = 0.468
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 25 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -300,14 +287,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ズ" type="TextureButton" parent="Katakana"]
+[node name="ズ" type="TextureButton" parent="Kana"]
 anchor_left = 0.508974
 anchor_top = 0.488
 anchor_right = 0.598718
 anchor_bottom = 0.628
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 24 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -315,14 +301,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ゼ" type="TextureButton" parent="Katakana"]
+[node name="ゼ" type="TextureButton" parent="Kana"]
 anchor_left = 0.508974
 anchor_top = 0.648
 anchor_right = 0.598718
 anchor_bottom = 0.788
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 20 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -330,14 +315,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ゾ" type="TextureButton" parent="Katakana"]
+[node name="ゾ" type="TextureButton" parent="Kana"]
 anchor_left = 0.508974
 anchor_top = 0.808
 anchor_right = 0.598718
 anchor_bottom = 0.948
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 22 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -345,7 +329,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ダ" type="TextureButton" parent="Katakana"]
+[node name="ダ" type="TextureButton" parent="Kana"]
 anchor_left = 0.620513
 anchor_top = 0.168
 anchor_right = 0.710256
@@ -353,7 +337,6 @@ anchor_bottom = 0.308
 margin_left = 3.05176e-05
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 11 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -361,7 +344,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ヂ" type="TextureButton" parent="Katakana"]
+[node name="ヂ" type="TextureButton" parent="Kana"]
 anchor_left = 0.620513
 anchor_top = 0.328
 anchor_right = 0.710256
@@ -369,7 +352,6 @@ anchor_bottom = 0.468
 margin_left = 3.05176e-05
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 32 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -377,7 +359,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ヅ" type="TextureButton" parent="Katakana"]
+[node name="ヅ" type="TextureButton" parent="Kana"]
 anchor_left = 0.620513
 anchor_top = 0.488
 anchor_right = 0.710256
@@ -385,7 +367,6 @@ anchor_bottom = 0.628
 margin_left = 3.05176e-05
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 26 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -393,7 +374,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="デ" type="TextureButton" parent="Katakana"]
+[node name="デ" type="TextureButton" parent="Kana"]
 anchor_left = 0.620513
 anchor_top = 0.648
 anchor_right = 0.710256
@@ -401,7 +382,6 @@ anchor_bottom = 0.788
 margin_left = 3.05176e-05
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 29 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -409,7 +389,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ド" type="TextureButton" parent="Katakana"]
+[node name="ド" type="TextureButton" parent="Kana"]
 anchor_left = 0.620513
 anchor_top = 0.808
 anchor_right = 0.710256
@@ -417,7 +397,6 @@ anchor_bottom = 0.948
 margin_left = 3.05176e-05
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 27 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -425,14 +404,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="バ" type="TextureButton" parent="Katakana"]
+[node name="バ" type="TextureButton" parent="Kana"]
 anchor_left = 0.732051
 anchor_top = 0.168
 anchor_right = 0.821795
 anchor_bottom = 0.308
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 31 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -440,14 +418,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ビ" type="TextureButton" parent="Katakana"]
+[node name="ビ" type="TextureButton" parent="Kana"]
 anchor_left = 0.732051
 anchor_top = 0.328
 anchor_right = 0.821795
 anchor_bottom = 0.468
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 33 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -455,14 +432,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ブ" type="TextureButton" parent="Katakana"]
+[node name="ブ" type="TextureButton" parent="Kana"]
 anchor_left = 0.732051
 anchor_top = 0.488
 anchor_right = 0.821795
 anchor_bottom = 0.628
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 14 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -470,14 +446,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ベ" type="TextureButton" parent="Katakana"]
+[node name="ベ" type="TextureButton" parent="Kana"]
 anchor_left = 0.732051
 anchor_top = 0.648
 anchor_right = 0.821795
 anchor_bottom = 0.788
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 28 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -485,14 +460,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ボ" type="TextureButton" parent="Katakana"]
+[node name="ボ" type="TextureButton" parent="Kana"]
 anchor_left = 0.732051
 anchor_top = 0.808
 anchor_right = 0.821795
 anchor_bottom = 0.948
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 30 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -500,14 +474,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="パ" type="TextureButton" parent="Katakana"]
+[node name="パ" type="TextureButton" parent="Kana"]
 anchor_left = 0.843589
 anchor_top = 0.168
 anchor_right = 0.933333
 anchor_bottom = 0.308
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -515,14 +488,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ピ" type="TextureButton" parent="Katakana"]
+[node name="ピ" type="TextureButton" parent="Kana"]
 anchor_left = 0.843589
 anchor_top = 0.328
 anchor_right = 0.933333
 anchor_bottom = 0.468
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 34 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -530,14 +502,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="プ" type="TextureButton" parent="Katakana"]
+[node name="プ" type="TextureButton" parent="Kana"]
 anchor_left = 0.843589
 anchor_top = 0.488
 anchor_right = 0.933333
 anchor_bottom = 0.628
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 35 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -545,14 +516,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ペ" type="TextureButton" parent="Katakana"]
+[node name="ペ" type="TextureButton" parent="Kana"]
 anchor_left = 0.843589
 anchor_top = 0.648
 anchor_right = 0.933333
 anchor_bottom = 0.788
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 37 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -560,14 +530,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ポ" type="TextureButton" parent="Katakana"]
+[node name="ポ" type="TextureButton" parent="Kana"]
 anchor_left = 0.843589
 anchor_top = 0.808
 anchor_right = 0.933333
 anchor_bottom = 0.948
 toggle_mode = true
 keep_pressed_outside = true
-group = ExtResource( 39 )
 texture_normal = ExtResource( 36 )
 texture_pressed = ExtResource( 38 )
 expand = true
@@ -600,6 +569,6 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="Back" to="Back" method="_on_SceneButton_pressed"]
-[connection signal="pressed" from="Katakana/SwitchtoHiragana" to="Katakana/SwitchtoHiragana" method="_on_SceneButton_pressed"]
+[connection signal="pressed" from="Kana/SwitchtoHiragana" to="Kana/SwitchtoHiragana" method="_on_SceneButton_pressed"]
 [connection signal="pressed" from="BackToK" to="BackToK" method="_on_SceneButton_pressed"]
 [connection signal="pressed" from="EnableALL" to="." method="_on_EnableALL_pressed"]
