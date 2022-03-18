@@ -1,7 +1,7 @@
 extends TextureButton
 
-var on_state = preload("res://assets/Buttons_Sliders/Right.png")
-var off_state = preload("res://assets/Buttons_Sliders/Left.png")
+var on_state = preload("res://assets/Buttons_Sliders/Pause.png")
+var off_state = preload("res://assets/Kana/Katakana/K/ka.png")
 
 export (bool) var togglestate
 

@@ -21,7 +21,6 @@ Settings="*res://scenes/Settings.tscn"
 HCompendium="*res://scenes/HCompendium.tscn"
 KCompendium="*res://scenes/KCompendium.tscn"
 Scoreboard1="*res://scenes/Scoreboard1.tscn"
-Config="*res://scripts/Config.gd"
 
 [input]
 
