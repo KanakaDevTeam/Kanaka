@@ -1,0 +1,90 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/Scoreboard/bronze medal.png" type="Texture" id=1]
+[ext_resource path="res://assets/Scoreboard/gold medal.png" type="Texture" id=2]
+[ext_resource path="res://assets/Display/background.png" type="Texture" id=3]
+[ext_resource path="res://assets/Scoreboard/silver medal.png" type="Texture" id=4]
+[ext_resource path="res://assets/Buttons_Sliders/Left.png" type="Texture" id=5]
+[ext_resource path="res://assets/Scoreboard/scoreboard board.png" type="Texture" id=6]
+[ext_resource path="res://scripts/ScreenSwitchButton.gd" type="Script" id=7]
+[ext_resource path="res://scripts/Scoreboard.gd" type="Script" id=8]
+
+[node name="Scoreboard" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.00098
+anchor_bottom = 1.00333
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Board" type="TextureRect" parent="."]
+anchor_left = 0.237141
+anchor_top = 0.206693
+anchor_right = 0.754719
+anchor_bottom = 0.80336
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Gold" type="TextureRect" parent="Board"]
+anchor_left = 0.05111
+anchor_top = 0.0791849
+anchor_right = 0.171865
+anchor_bottom = 0.257956
+margin_left = -1.90735e-06
+margin_top = 1.90735e-06
+margin_bottom = 7.62939e-06
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Silver" type="TextureRect" parent="Board"]
+anchor_left = 0.0503713
+anchor_top = 0.408282
+anchor_right = 0.171126
+anchor_bottom = 0.587053
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="Board"]
+anchor_left = 0.0494191
+anchor_top = 0.736059
+anchor_right = 0.170174
+anchor_bottom = 0.91483
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Back" type="Button" parent="."]
+anchor_left = 0.00405204
+anchor_top = -0.034179
+anchor_right = 0.140771
+anchor_bottom = 0.227488
+icon = ExtResource( 5 )
+flat = true
+expand_icon = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+scene_path = "res://scenes/MainMenuScreen.tscn"
+
+[connection signal="pressed" from="Back" to="Back" method="_on_SceneButton_pressed"]

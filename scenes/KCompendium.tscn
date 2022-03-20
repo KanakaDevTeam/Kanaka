@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=94 format=2]
 
 [ext_resource path="res://assets/Display/background.png" type="Texture" id=1]
 [ext_resource path="res://assets/Buttons_Sliders/Left.png" type="Texture" id=2]
@@ -47,11 +47,52 @@
 [ext_resource path="res://assets/Kana/Katakana/R/ri.png" type="Texture" id=45]
 [ext_resource path="res://assets/Kana/Katakana/R/ru.png" type="Texture" id=46]
 [ext_resource path="res://assets/Kana/Katakana/R/ro.png" type="Texture" id=47]
-[ext_resource path="res://assets/Buttons_Sliders/Pause.png" type="Texture" id=48]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/r/ro.png" type="Texture" id=48]
 [ext_resource path="res://KatakanaButtonGroup.tres" type="ButtonGroup" id=49]
 [ext_resource path="res://scripts/KatakanaScripts/カ.gd" type="Script" id=50]
 [ext_resource path="res://scripts/KatakanaScripts/ア.gd" type="Script" id=51]
 [ext_resource path="res://scripts/KatakanaScripts/サ.gd" type="Script" id=52]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/m/mo.png" type="Texture" id=53]
+[ext_resource path="res://assets/3-20-Additions/Hiragana Pressed/vowels/Pause.png.tres" type="Texture" id=54]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/r/ra.png" type="Texture" id=55]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/r/ri.png" type="Texture" id=56]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/r/ru.png" type="Texture" id=57]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/r/re.png" type="Texture" id=58]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/m/mu.png" type="Texture" id=59]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/m/me.png" type="Texture" id=60]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/h/plain/ha.png" type="Texture" id=61]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/vowels/u.png" type="Texture" id=62]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/vowels/a.png" type="Texture" id=63]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/s/plain/su.png" type="Texture" id=64]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/s/plain/so.png" type="Texture" id=65]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/t/plain/chi.png" type="Texture" id=66]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/k/plain/ko.png" type="Texture" id=67]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/vowels/Pause.png.tres" type="Texture" id=68]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/vowels/i.png" type="Texture" id=69]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/vowels/o.png" type="Texture" id=70]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/s/plain/sa.png" type="Texture" id=71]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/t/plain/ta.png" type="Texture" id=72]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/t/plain/tsu.png" type="Texture" id=73]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/t/plain/te.png" type="Texture" id=74]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/t/plain/to.png" type="Texture" id=75]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/k/plain/ka.png" type="Texture" id=76]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/s/plain/shi.png" type="Texture" id=77]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/n/na.png" type="Texture" id=78]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/n/ni.png" type="Texture" id=79]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/n/nu.png" type="Texture" id=80]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/n/ne.png" type="Texture" id=81]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/n/no.png" type="Texture" id=82]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/h/plain/hi.png" type="Texture" id=83]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/k/plain/ke.png" type="Texture" id=84]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/vowels/e.png" type="Texture" id=85]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/k/plain/ku.png" type="Texture" id=86]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/h/plain/fu.png" type="Texture" id=87]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/s/plain/se.png" type="Texture" id=88]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/k/plain/ki.png" type="Texture" id=89]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/h/plain/he.png" type="Texture" id=90]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/m/mi.png" type="Texture" id=91]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/m/ma.png" type="Texture" id=92]
+[ext_resource path="res://assets/3-20-Additions/Katakana Pressed/h/plain/ho.png" type="Texture" id=93]
 
 [node name="KCompendium" type="Control"]
 anchor_right = 1.0
@@ -124,6 +165,8 @@ margin_right = 7.62939e-06
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 63 )
+texture_hover = ExtResource( 54 )
 expand = true
 script = ExtResource( 51 )
 __meta__ = {
@@ -131,30 +174,32 @@ __meta__ = {
 }
 
 [node name="イ" type="TextureButton" parent="Kana"]
-anchor_left = 0.0628205
-anchor_top = 0.328
-anchor_right = 0.152564
-anchor_bottom = 0.468
+anchor_left = 0.0605361
+anchor_top = 0.329782
+anchor_right = 0.15028
+anchor_bottom = 0.469782
 margin_right = 7.62939e-06
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 11 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 69 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="ウ" type="TextureButton" parent="Kana"]
-anchor_left = 0.0628205
+anchor_left = 0.0639627
 anchor_top = 0.488
-anchor_right = 0.152564
+anchor_right = 0.153706
 anchor_bottom = 0.628
 margin_right = 7.62939e-06
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 12 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 62 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -169,7 +214,8 @@ margin_right = 7.62939e-06
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 13 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 85 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -184,7 +230,8 @@ margin_right = 7.62939e-06
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 14 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 70 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -192,12 +239,14 @@ __meta__ = {
 
 [node name="カ" type="TextureButton" parent="Kana"]
 anchor_left = 0.174359
-anchor_top = 0.168
+anchor_top = 0.166218
 anchor_right = 0.264102
-anchor_bottom = 0.308
+anchor_bottom = 0.306218
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 76 )
+texture_hover = ExtResource( 68 )
 expand = true
 script = ExtResource( 50 )
 __meta__ = {
@@ -212,7 +261,8 @@ anchor_bottom = 0.468
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 21 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 89 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -226,7 +276,8 @@ anchor_bottom = 0.628
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 23 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 86 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -240,7 +291,8 @@ anchor_bottom = 0.788
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 22 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 84 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -254,7 +306,8 @@ anchor_bottom = 0.948
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 20 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 67 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -268,6 +321,8 @@ anchor_bottom = 0.308
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 71 )
+texture_hover = ExtResource( 68 )
 expand = true
 script = ExtResource( 52 )
 __meta__ = {
@@ -282,7 +337,8 @@ anchor_bottom = 0.468
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 26 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 77 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -296,21 +352,23 @@ anchor_bottom = 0.628
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 33 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 64 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="セ" type="TextureButton" parent="Kana"]
-anchor_left = 0.285897
+anchor_left = 0.287039
 anchor_top = 0.648
-anchor_right = 0.375641
+anchor_right = 0.376783
 anchor_bottom = 0.788
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 35 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 88 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -324,7 +382,8 @@ anchor_bottom = 0.948
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 32 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 65 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -338,7 +397,8 @@ anchor_bottom = 0.308
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 16 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 72 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -352,7 +412,8 @@ anchor_bottom = 0.468
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 34 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 66 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -366,7 +427,8 @@ anchor_bottom = 0.628
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 30 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 73 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -380,7 +442,8 @@ anchor_bottom = 0.788
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 24 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 74 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -394,7 +457,8 @@ anchor_bottom = 0.948
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 29 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 75 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -408,7 +472,8 @@ anchor_bottom = 0.308
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 18 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 78 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -422,7 +487,8 @@ anchor_bottom = 0.468
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 28 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 79 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -436,7 +502,8 @@ anchor_bottom = 0.628
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 25 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 80 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -450,7 +517,8 @@ anchor_bottom = 0.788
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 27 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 81 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -464,7 +532,8 @@ anchor_bottom = 0.948
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 31 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 82 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -479,7 +548,8 @@ margin_left = 3.05176e-05
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 17 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 61 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -494,7 +564,8 @@ margin_left = 3.05176e-05
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 41 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 83 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -509,7 +580,8 @@ margin_left = 3.05176e-05
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 39 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 87 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -524,22 +596,24 @@ margin_left = 3.05176e-05
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 43 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 90 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="ホ" type="TextureButton" parent="Kana"]
-anchor_left = 0.620513
+anchor_left = 0.619371
 anchor_top = 0.808
-anchor_right = 0.710256
+anchor_right = 0.709114
 anchor_bottom = 0.948
 margin_left = 3.05176e-05
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 36 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 93 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -553,7 +627,8 @@ anchor_bottom = 0.308
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 15 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 92 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -567,7 +642,8 @@ anchor_bottom = 0.468
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 40 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 91 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -575,13 +651,14 @@ __meta__ = {
 
 [node name="ム" type="TextureButton" parent="Kana"]
 anchor_left = 0.732051
-anchor_top = 0.488
+anchor_top = 0.486218
 anchor_right = 0.821795
-anchor_bottom = 0.628
+anchor_bottom = 0.626218
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 42 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 59 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -595,21 +672,23 @@ anchor_bottom = 0.788
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 37 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 60 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="モ" type="TextureButton" parent="Kana"]
-anchor_left = 0.732051
-anchor_top = 0.808
-anchor_right = 0.821795
-anchor_bottom = 0.948
+anchor_left = 0.728624
+anchor_top = 0.809782
+anchor_right = 0.818368
+anchor_bottom = 0.949782
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 38 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 53 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -623,7 +702,8 @@ anchor_bottom = 0.308
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 19 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 55 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -637,7 +717,8 @@ anchor_bottom = 0.468
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 45 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 56 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -651,7 +732,8 @@ anchor_bottom = 0.628
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 46 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 57 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -665,7 +747,8 @@ anchor_bottom = 0.788
 toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 44 )
-texture_pressed = ExtResource( 48 )
+texture_pressed = ExtResource( 58 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
@@ -680,6 +763,7 @@ toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 47 )
 texture_pressed = ExtResource( 48 )
+texture_hover = ExtResource( 68 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
