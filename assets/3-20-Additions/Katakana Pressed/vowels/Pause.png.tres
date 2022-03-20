@@ -1,0 +1,5 @@
+[gd_resource type="StreamTexture" format=2]
+
+[resource]
+flags = 4
+load_path = "res://.import/Pause.png-304a2403e715d548c01a9e13e06c4e54.stex"

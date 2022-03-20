@@ -1,0 +1,573 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://assets/Display/background.png" type="Texture" id=1]
+[ext_resource path="res://assets/Buttons_Sliders/Left.png" type="Texture" id=2]
+[ext_resource path="res://scripts/ScreenSwitchButton.gd" type="Script" id=3]
+[ext_resource path="res://assets/Kana/Katakana/Vowels/a.png" type="Texture" id=4]
+[ext_resource path="res://assets/Compendium/Hiragana.png" type="Texture" id=5]
+[ext_resource path="res://scripts/Compendium.gd" type="Script" id=6]
+[ext_resource path="res://assets/Kana/Hiragana/Y/Yo.png" type="Texture" id=7]
+[ext_resource path="res://assets/Kana/Hiragana/K/Dakuten/Gi.png" type="Texture" id=8]
+[ext_resource path="res://assets/Kana/Hiragana/N.png" type="Texture" id=9]
+[ext_resource path="res://assets/Kana/Hiragana/K/Dakuten/Ga.png" type="Texture" id=10]
+[ext_resource path="res://assets/Kana/Hiragana/K/Dakuten/Go.png" type="Texture" id=11]
+[ext_resource path="res://assets/Kana/Hiragana/Y/Yu.png" type="Texture" id=12]
+[ext_resource path="res://assets/Kana/Hiragana/K/Dakuten/Gu.png" type="Texture" id=13]
+[ext_resource path="res://assets/Kana/Hiragana/K/Dakuten/Ge.png" type="Texture" id=14]
+[ext_resource path="res://assets/Kana/Hiragana/T/Da.png" type="Texture" id=15]
+[ext_resource path="res://assets/Kana/Hiragana/T/Zu.png" type="Texture" id=16]
+[ext_resource path="res://assets/Kana/Hiragana/S/Zi.png" type="Texture" id=17]
+[ext_resource path="res://assets/Kana/Hiragana/T/De.png" type="Texture" id=18]
+[ext_resource path="res://assets/Kana/Hiragana/S/Za.png" type="Texture" id=19]
+[ext_resource path="res://assets/Kana/Hiragana/W/Wa.png" type="Texture" id=20]
+[ext_resource path="res://assets/Kana/Hiragana/H/Pa.png" type="Texture" id=21]
+[ext_resource path="res://assets/Kana/Hiragana/S/Ze.png" type="Texture" id=22]
+[ext_resource path="res://assets/Kana/Hiragana/T/Do.png" type="Texture" id=23]
+[ext_resource path="res://assets/Kana/Hiragana/S/Zo.png" type="Texture" id=24]
+[ext_resource path="res://assets/Kana/Hiragana/Y/Ya.png" type="Texture" id=25]
+[ext_resource path="res://assets/Kana/Hiragana/H/Ba.png" type="Texture" id=26]
+[ext_resource path="res://assets/Kana/Hiragana/S/Zu.png" type="Texture" id=27]
+[ext_resource path="res://assets/Kana/Hiragana/W/Wo.png" type="Texture" id=28]
+[ext_resource path="res://assets/Kana/Hiragana/T/Dzu.png" type="Texture" id=29]
+[ext_resource path="res://assets/Kana/Hiragana/H/Bi.png" type="Texture" id=30]
+[ext_resource path="res://assets/Kana/Hiragana/H/Be.png" type="Texture" id=31]
+[ext_resource path="res://assets/Kana/Hiragana/H/Bo.png" type="Texture" id=32]
+[ext_resource path="res://assets/Kana/Hiragana/H/Bu.png" type="Texture" id=33]
+[ext_resource path="res://assets/Kana/Hiragana/H/Pi.png" type="Texture" id=34]
+[ext_resource path="res://assets/Kana/Hiragana/H/Pu.png" type="Texture" id=35]
+[ext_resource path="res://assets/Kana/Hiragana/H/Pe.png" type="Texture" id=36]
+[ext_resource path="res://assets/Kana/Hiragana/H/Po.png" type="Texture" id=37]
+[ext_resource path="res://assets/Buttons_Sliders/Pause.png" type="Texture" id=38]
+[ext_resource path="res://HiraganaButtonGroup.tres" type="ButtonGroup" id=39]
+
+[node name="HDCompendium" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+group = ExtResource( 39 )
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Back" type="Button" parent="."]
+anchor_left = 0.00405204
+anchor_top = -0.034179
+anchor_right = 0.140771
+anchor_bottom = 0.227488
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+scene_path = "res://scenes/MainMenuScreen.tscn"
+
+[node name="Kana" type="TextureRect" parent="."]
+anchor_left = 0.15918
+anchor_top = 0.105
+anchor_right = 0.920898
+anchor_bottom = 0.938333
+margin_top = 3.8147e-06
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="SwitchToKatakana" type="Button" parent="Kana"]
+anchor_left = 0.79086
+anchor_top = -0.0041197
+anchor_right = 0.922659
+anchor_bottom = 0.127679
+margin_left = 16.1292
+margin_top = 0.05985
+margin_right = 16.1292
+margin_bottom = 0.0598488
+icon = ExtResource( 4 )
+flat = true
+expand_icon = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+scene_path = "res://scenes/KCompendium.tscn"
+
+[node name="や" type="TextureButton" parent="Kana"]
+anchor_left = 0.0628206
+anchor_top = 0.168
+anchor_right = 0.152564
+anchor_bottom = 0.308
+margin_left = 3.8147e-06
+margin_right = -7.62939e-06
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 25 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ゆ" type="TextureButton" parent="Kana"]
+anchor_left = 0.0628206
+anchor_top = 0.488
+anchor_right = 0.152564
+anchor_bottom = 0.628
+margin_left = 3.8147e-06
+margin_right = -7.62939e-06
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="よ" type="TextureButton" parent="Kana"]
+anchor_left = 0.0628206
+anchor_top = 0.808
+anchor_right = 0.152564
+anchor_bottom = 0.948
+margin_left = 3.8147e-06
+margin_right = -7.62939e-06
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="わ" type="TextureButton" parent="Kana"]
+anchor_left = 0.174359
+anchor_top = 0.808
+anchor_right = 0.264103
+anchor_bottom = 0.948
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 28 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="を" type="TextureButton" parent="Kana"]
+anchor_left = 0.174359
+anchor_top = 0.168
+anchor_right = 0.264103
+anchor_bottom = 0.308
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ん" type="TextureButton" parent="Kana"]
+anchor_left = 0.285898
+anchor_top = 0.168
+anchor_right = 0.375641
+anchor_bottom = 0.308
+margin_left = 1.52588e-05
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="が" type="TextureButton" parent="Kana"]
+anchor_left = 0.397436
+anchor_top = 0.168
+anchor_right = 0.48718
+anchor_bottom = 0.308
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ぎ" type="TextureButton" parent="Kana"]
+anchor_left = 0.397436
+anchor_top = 0.328
+anchor_right = 0.48718
+anchor_bottom = 0.468
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ぐ" type="TextureButton" parent="Kana"]
+anchor_left = 0.397436
+anchor_top = 0.488
+anchor_right = 0.48718
+anchor_bottom = 0.628
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="げ" type="TextureButton" parent="Kana"]
+anchor_left = 0.397436
+anchor_top = 0.648
+anchor_right = 0.48718
+anchor_bottom = 0.788
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ご" type="TextureButton" parent="Kana"]
+anchor_left = 0.397436
+anchor_top = 0.808
+anchor_right = 0.48718
+anchor_bottom = 0.948
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ざ" type="TextureButton" parent="Kana"]
+anchor_left = 0.508975
+anchor_top = 0.168
+anchor_right = 0.598719
+anchor_bottom = 0.308
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 19 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="じ" type="TextureButton" parent="Kana"]
+anchor_left = 0.508975
+anchor_top = 0.328
+anchor_right = 0.598719
+anchor_bottom = 0.468
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ず" type="TextureButton" parent="Kana"]
+anchor_left = 0.508975
+anchor_top = 0.488
+anchor_right = 0.598719
+anchor_bottom = 0.628
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 27 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ぜ" type="TextureButton" parent="Kana"]
+anchor_left = 0.508975
+anchor_top = 0.648
+anchor_right = 0.598719
+anchor_bottom = 0.788
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 22 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ぞ" type="TextureButton" parent="Kana"]
+anchor_left = 0.508975
+anchor_top = 0.808
+anchor_right = 0.598719
+anchor_bottom = 0.948
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="だ" type="TextureButton" parent="Kana"]
+anchor_left = 0.620514
+anchor_top = 0.168
+anchor_right = 0.710257
+anchor_bottom = 0.308
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ぢ" type="TextureButton" parent="Kana"]
+anchor_left = 0.620514
+anchor_top = 0.328
+anchor_right = 0.710257
+anchor_bottom = 0.468
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="づ" type="TextureButton" parent="Kana"]
+anchor_left = 0.620514
+anchor_top = 0.488
+anchor_right = 0.710257
+anchor_bottom = 0.628
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="で" type="TextureButton" parent="Kana"]
+anchor_left = 0.620514
+anchor_top = 0.648
+anchor_right = 0.710257
+anchor_bottom = 0.788
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ど" type="TextureButton" parent="Kana"]
+anchor_left = 0.620514
+anchor_top = 0.808
+anchor_right = 0.710257
+anchor_bottom = 0.948
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ば" type="TextureButton" parent="Kana"]
+anchor_left = 0.732052
+anchor_top = 0.168
+anchor_right = 0.821796
+anchor_bottom = 0.308
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="び" type="TextureButton" parent="Kana"]
+anchor_left = 0.732052
+anchor_top = 0.328
+anchor_right = 0.821796
+anchor_bottom = 0.468
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 30 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ぶ" type="TextureButton" parent="Kana"]
+anchor_left = 0.732052
+anchor_top = 0.488
+anchor_right = 0.821796
+anchor_bottom = 0.628
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 33 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="べ" type="TextureButton" parent="Kana"]
+anchor_left = 0.732052
+anchor_top = 0.648
+anchor_right = 0.821796
+anchor_bottom = 0.788
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 31 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ぼ" type="TextureButton" parent="Kana"]
+anchor_left = 0.732052
+anchor_top = 0.808
+anchor_right = 0.821796
+anchor_bottom = 0.948
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 32 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ぱ" type="TextureButton" parent="Kana"]
+anchor_left = 0.843591
+anchor_top = 0.168
+anchor_right = 0.933334
+anchor_bottom = 0.308
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ぴ" type="TextureButton" parent="Kana"]
+anchor_left = 0.843591
+anchor_top = 0.328
+anchor_right = 0.933334
+anchor_bottom = 0.468
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 34 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ぷ" type="TextureButton" parent="Kana"]
+anchor_left = 0.843591
+anchor_top = 0.488
+anchor_right = 0.933334
+anchor_bottom = 0.628
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 35 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ぺ" type="TextureButton" parent="Kana"]
+anchor_left = 0.843591
+anchor_top = 0.648
+anchor_right = 0.933334
+anchor_bottom = 0.788
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 36 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ぽ" type="TextureButton" parent="Kana"]
+anchor_left = 0.843591
+anchor_top = 0.808
+anchor_right = 0.933334
+anchor_bottom = 0.948
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource( 37 )
+texture_pressed = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BackToH" type="Button" parent="."]
+anchor_left = 0.875977
+anchor_top = 0.825
+anchor_right = 0.973633
+anchor_bottom = 0.991667
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+scene_path = "res://scenes/HCompendium.tscn"
+
+[node name="EnableALL" type="Button" parent="."]
+margin_left = 36.0
+margin_top = 478.0
+margin_right = 136.0
+margin_bottom = 538.0
+text = "ENABLE ALL"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Back" to="Back" method="_on_SceneButton_pressed"]
+[connection signal="pressed" from="Kana/SwitchToKatakana" to="Kana/SwitchToKatakana" method="_on_SceneButton_pressed"]
+[connection signal="pressed" from="BackToH" to="BackToH" method="_on_SceneButton_pressed"]
+[connection signal="pressed" from="EnableALL" to="." method="_on_EnableALL_pressed"]
