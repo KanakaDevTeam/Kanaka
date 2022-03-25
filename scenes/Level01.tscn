@@ -1,11 +1,33 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/Display/background.png" type="Texture" id=1]
 [ext_resource path="res://scripts/ScreenSwitchButton.gd" type="Script" id=2]
 [ext_resource path="res://assets/Buttons_Sliders/Pause.png" type="Texture" id=3]
 [ext_resource path="res://assets/Gameplay/Basket.png" type="Texture" id=4]
+[ext_resource path="res://scripts/BasketRow.gd" type="Script" id=5]
+[ext_resource path="res://assets/3-20-Additions/Hiragana Pressed/h/plain/ho.png" type="Texture" id=6]
+[ext_resource path="res://assets/Kana/Hiragana/K/Plain/Ka.png" type="Texture" id=7]
+[ext_resource path="res://assets/Buttons_Sliders/Slider Fill.png" type="Texture" id=8]
+[ext_resource path="res://scripts/GameScreen.gd" type="Script" id=9]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 82.421
+height = 86.0112
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 40, 48 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 40, 48 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 512, 10 )
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 24.5967
 
 [node name="Level01" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="Background" type="TextureRect" parent="."]
 margin_right = 1024.0
@@ -16,10 +38,37 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PauseButton" type="Button" parent="."]
-margin_left = 900.0
+[node name="GridContainer" type="GridContainer" parent="."]
 margin_right = 1024.0
-margin_bottom = 111.0
+margin_bottom = 96.0
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 423.0
+margin_top = 18.0
+margin_right = 580.0
+margin_bottom = 49.0
+text = "THE TIME REMAINING"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 89.0
+margin_bottom = 88.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseButton" type="Button" parent="."]
+margin_left = 932.0
+margin_right = 1022.0
+margin_bottom = 77.0
 icon = ExtResource( 3 )
 flat = true
 expand_icon = true
@@ -29,15 +78,61 @@ __meta__ = {
 }
 scene_path = "res://scenes/GameOverSreen.tscn"
 
-[node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 439.883
-margin_top = 488.271
-margin_right = 595.883
-margin_bottom = 565.271
+[node name="TileMap" type="TileMap" parent="."]
+cell_size = Vector2( 80, 48 )
+format = 1
+
+[node name="Basket" type="Area2D" parent="TileMap"]
+position = Vector2( 520, 552 )
+scale = Vector2( 0.302966, 0.327586 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="TileMap/Basket"]
+scale = Vector2( 0.28, 0.36 )
 texture = ExtResource( 4 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Basket"]
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="LeftBlock" type="Area2D" parent="TileMap"]
+position = Vector2( 120, 552 )
+
+[node name="Sprite" type="Sprite" parent="TileMap/LeftBlock"]
+scale = Vector2( 1.25, 1 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/LeftBlock"]
+shape = SubResource( 2 )
+
+[node name="RightBlock" type="Area2D" parent="TileMap"]
+position = Vector2( 920, 552 )
+
+[node name="Sprite" type="Sprite" parent="TileMap/RightBlock"]
+scale = Vector2( 1.25, 1 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RightBlock"]
+shape = SubResource( 3 )
+
+[node name="LoseBlock" type="Area2D" parent="TileMap"]
+position = Vector2( 512, 590 )
+
+[node name="Sprite" type="Sprite" parent="TileMap/LoseBlock"]
+scale = Vector2( 16, 1 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/LoseBlock"]
+shape = SubResource( 4 )
+
+[node name="Testkanablock" type="Area2D" parent="TileMap"]
+position = Vector2( 520, 160 )
+
+[node name="Sprite" type="Sprite" parent="TileMap/Testkanablock"]
+scale = Vector2( 0.02, 0.02 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Testkanablock"]
+shape = SubResource( 5 )
 
 [connection signal="pressed" from="PauseButton" to="PauseButton" method="_on_PauseButton_pressed"]
