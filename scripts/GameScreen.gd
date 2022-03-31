@@ -67,10 +67,16 @@ func _unhandled_input(event):
     if event.is_action_pressed("pause_key"):
         pausebutton.pausegame()
     if event.is_action_pressed("quit_key"):
-        if get_tree().change_scene("res://scenes/GameOverSreen.tscn") != OK:
+        if get_tree().change_scene("res://scenes/MainMenuScreen.tscn") != OK:
             print("Error: Unable to change the scene.")
     if event.is_action_pressed("left_key"):
         basket.moveleft()
     if event.is_action_pressed("right_key"):
         basket.moveright()
     get_tree().set_input_as_handled()
+
+
+func _on_BackButton_pressed():
+    get_tree().paused = false
+    if get_tree().change_scene("res://scenes/GameOverSreen.tscn") != OK:
+        print("Error: Unable to change the scene.")
