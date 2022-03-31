@@ -12,16 +12,17 @@ var colsize = 80
 # Called when the node enters the scene tree for the first time.
 func _ready():
     position = position.snapped((Vector2.ONE * colsize) - (Vector2.ONE * colsize / 2))
-    pass # Replace with function body.
 
-func _unhandled_input(event):
-    if event.is_action_pressed("left_key") and column > leftlim:
+
+func moveleft():
+    if column > leftlim:
         position += Vector2.LEFT * colsize
         column -= 1
-    if event.is_action_pressed("right_key") and column < rightlim:
+
+func moveright():
+    if column < rightlim:
         position += Vector2.RIGHT * colsize
         column += 1
-    get_tree().set_input_as_handled()
 
 func update_lims(numcol):
     print("NUMBER OF COLS = "+str(numcol))
