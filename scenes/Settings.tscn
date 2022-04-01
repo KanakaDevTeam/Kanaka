@@ -27,27 +27,24 @@ var off_state = preload(\"res://assets/Buttons_Sliders/Left.png\")
 export (bool) var togglestate
 
 func _ready():
-    togglestate = 0
+	togglestate = 0
 
 func update_icon():
-    if togglestate:
-        texture_normal = on_state
-    else:
-        texture_normal = off_state
+	if togglestate:
+		texture_normal = on_state
+	else:
+		texture_normal = off_state
 
 func _on_ToggleButton_pressed():
-    #change sprite
-    togglestate = !togglestate
-    update_icon()
+	#change sprite
+	togglestate = !togglestate
+	update_icon()
 "
 
 [node name="Settings" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 10 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_left = 0.00195313
