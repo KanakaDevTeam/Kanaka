@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=70 format=2]
 
 [ext_resource path="res://assets/Display/background.png" type="Texture" id=1]
 [ext_resource path="res://assets/Buttons_Sliders/Left.png" type="Texture" id=2]
@@ -38,7 +38,6 @@
 [ext_resource path="res://assets/Kana/Hiragana/H/Pe.png" type="Texture" id=36]
 [ext_resource path="res://assets/Kana/Hiragana/H/Po.png" type="Texture" id=37]
 [ext_resource path="res://assets/3-20-Additions/Hiragana Pressed/s/dakuten/zo.png" type="Texture" id=38]
-[ext_resource path="res://HiraganaButtonGroup.tres" type="ButtonGroup" id=39]
 [ext_resource path="res://assets/3-20-Additions/Hiragana Pressed/s/dakuten/zu.png" type="Texture" id=40]
 [ext_resource path="res://assets/3-20-Additions/Hiragana Pressed/s/dakuten/ze.png" type="Texture" id=41]
 [ext_resource path="res://assets/3-20-Additions/Hiragana Pressed/s/dakuten/za.png" type="Texture" id=42]
@@ -75,10 +74,6 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-group = ExtResource( 39 )
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -631,5 +626,36 @@ __meta__ = {
 
 [connection signal="pressed" from="Back" to="Back" method="_on_SceneButton_pressed"]
 [connection signal="pressed" from="Kana/SwitchToKatakana" to="Kana/SwitchToKatakana" method="_on_SceneButton_pressed"]
+[connection signal="pressed" from="Kana/や" to="." method="_on_kana_pressed" binds= [ "Kana/や" ]]
+[connection signal="pressed" from="Kana/ゆ" to="." method="_on_kana_pressed" binds= [ "Kana/ゆ" ]]
+[connection signal="pressed" from="Kana/よ" to="." method="_on_kana_pressed" binds= [ "Kana/よ" ]]
+[connection signal="pressed" from="Kana/わ" to="." method="_on_kana_pressed" binds= [ "Kana/わ" ]]
+[connection signal="pressed" from="Kana/を" to="." method="_on_kana_pressed" binds= [ "Kana/を" ]]
+[connection signal="pressed" from="Kana/ん" to="." method="_on_kana_pressed" binds= [ "Kana/ん" ]]
+[connection signal="pressed" from="Kana/が" to="." method="_on_kana_pressed" binds= [ "Kana/が" ]]
+[connection signal="pressed" from="Kana/ぎ" to="." method="_on_kana_pressed" binds= [ "Kana/ぎ" ]]
+[connection signal="pressed" from="Kana/ぐ" to="." method="_on_kana_pressed" binds= [ "Kana/ぐ" ]]
+[connection signal="pressed" from="Kana/げ" to="." method="_on_kana_pressed" binds= [ "Kana/げ" ]]
+[connection signal="pressed" from="Kana/ご" to="." method="_on_kana_pressed" binds= [ "Kana/ご" ]]
+[connection signal="pressed" from="Kana/ざ" to="." method="_on_kana_pressed" binds= [ "Kana/ざ" ]]
+[connection signal="pressed" from="Kana/じ" to="." method="_on_kana_pressed" binds= [ "Kana/じ" ]]
+[connection signal="pressed" from="Kana/ず" to="." method="_on_kana_pressed" binds= [ "Kana/ず" ]]
+[connection signal="pressed" from="Kana/ぜ" to="." method="_on_kana_pressed" binds= [ "Kana/ぜ" ]]
+[connection signal="pressed" from="Kana/ぞ" to="." method="_on_kana_pressed" binds= [ "Kana/ぞ" ]]
+[connection signal="pressed" from="Kana/だ" to="." method="_on_kana_pressed" binds= [ "Kana/だ" ]]
+[connection signal="pressed" from="Kana/ぢ" to="." method="_on_kana_pressed" binds= [ "Kana/ぢ" ]]
+[connection signal="pressed" from="Kana/づ" to="." method="_on_kana_pressed" binds= [ "Kana/づ" ]]
+[connection signal="pressed" from="Kana/で" to="." method="_on_kana_pressed" binds= [ "Kana/で" ]]
+[connection signal="pressed" from="Kana/ど" to="." method="_on_kana_pressed" binds= [ "Kana/ど" ]]
+[connection signal="pressed" from="Kana/ば" to="." method="_on_kana_pressed" binds= [ "Kana/ば" ]]
+[connection signal="pressed" from="Kana/び" to="." method="_on_kana_pressed" binds= [ "Kana/び" ]]
+[connection signal="pressed" from="Kana/ぶ" to="." method="_on_kana_pressed" binds= [ "Kana/ぶ" ]]
+[connection signal="pressed" from="Kana/べ" to="." method="_on_kana_pressed" binds= [ "Kana/べ" ]]
+[connection signal="pressed" from="Kana/ぼ" to="." method="_on_kana_pressed" binds= [ "Kana/ぼ" ]]
+[connection signal="pressed" from="Kana/ぱ" to="." method="_on_kana_pressed" binds= [ "Kana/ぱ" ]]
+[connection signal="pressed" from="Kana/ぴ" to="." method="_on_kana_pressed" binds= [ "Kana/ぴ" ]]
+[connection signal="pressed" from="Kana/ぷ" to="." method="_on_kana_pressed" binds= [ "Kana/ぷ" ]]
+[connection signal="pressed" from="Kana/ぺ" to="." method="_on_kana_pressed" binds= [ "Kana/ぺ" ]]
+[connection signal="pressed" from="Kana/ぽ" to="." method="_on_kana_pressed" binds= [ "Kana/ぽ" ]]
 [connection signal="pressed" from="BackToH" to="BackToH" method="_on_SceneButton_pressed"]
 [connection signal="pressed" from="EnableALL" to="." method="_on_EnableALL_pressed"]

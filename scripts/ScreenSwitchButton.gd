@@ -12,6 +12,10 @@ func _on_ExitButton_pressed():
 	get_tree().quit()
 
 
+#use this to pause the game
+func _on_PauseButton_pressed():
+	if get_tree().change_scene(scene_path) != OK:
+		print("Error: Unable to change the scene.")
 
 func _get_configuration_warning():
 	if scene_path == "":
