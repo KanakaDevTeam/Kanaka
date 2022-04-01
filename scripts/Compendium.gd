@@ -45,10 +45,6 @@ func _on_EnableALL_pressed():
 	for i in parent:
 		if i is TextureButton:
 			i.pressed = setToTrue
-  main
-	setToTrue = !setToTrue
-	print(parent)
-
 			path = str(i.get_path())
 			splitpath = path.split("/")
 			nodepath = splitpath[3] + "/" + splitpath[4]
@@ -80,5 +76,3 @@ func _on_kana_pressed(button_path):
 	print(button_path)
 	KanaConfig[button_path] = !KanaConfig[button_path]
 	saveCompen()
-
-  main
