@@ -1,11 +1,11 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://assets/Display/background.png" type="Texture" id=1]
 [ext_resource path="res://assets/Buttons_Sliders/Left.png" type="Texture" id=2]
 [ext_resource path="res://scripts/ScreenSwitchButton.gd" type="Script" id=3]
 [ext_resource path="res://assets/Compendium/Katakana.png" type="Texture" id=4]
 [ext_resource path="res://assets/Kana/Hiragana/Vowels/A.png" type="Texture" id=5]
-[ext_resource path="res://scripts/Compendium.gd" type="Script" id=6]
+[ext_resource path="res://scripts/HiraganaCompendium.gd" type="Script" id=6]
 [ext_resource path="res://assets/Buttons_Sliders/Right.png" type="Texture" id=7]
 [ext_resource path="res://assets/Kana/Katakana/S/sa.png" type="Texture" id=8]
 [ext_resource path="res://assets/Kana/Katakana/K/ka.png" type="Texture" id=9]
@@ -48,19 +48,11 @@
 [ext_resource path="res://assets/Kana/Katakana/R/ru.png" type="Texture" id=46]
 [ext_resource path="res://assets/Kana/Katakana/R/ro.png" type="Texture" id=47]
 [ext_resource path="res://assets/Buttons_Sliders/Pause.png" type="Texture" id=48]
-[ext_resource path="res://KatakanaButtonGroup.tres" type="ButtonGroup" id=49]
-[ext_resource path="res://scripts/KatakanaScripts/カ.gd" type="Script" id=50]
-[ext_resource path="res://scripts/KatakanaScripts/ア.gd" type="Script" id=51]
-[ext_resource path="res://scripts/KatakanaScripts/サ.gd" type="Script" id=52]
 
 [node name="KCompendium" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-group = ExtResource( 49 )
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -125,7 +117,6 @@ toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 10 )
 expand = true
-script = ExtResource( 51 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -199,7 +190,6 @@ toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 9 )
 expand = true
-script = ExtResource( 50 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -269,7 +259,6 @@ toggle_mode = true
 keep_pressed_outside = true
 texture_normal = ExtResource( 8 )
 expand = true
-script = ExtResource( 52 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -711,8 +700,5 @@ __meta__ = {
 
 [connection signal="pressed" from="Back" to="Back" method="_on_SceneButton_pressed"]
 [connection signal="pressed" from="Kana/SwitchtoHiragana" to="Kana/SwitchtoHiragana" method="_on_SceneButton_pressed"]
-[connection signal="pressed" from="Kana/ア" to="Kana/ア" method="_on_ToggleButton_pressed"]
-[connection signal="pressed" from="Kana/カ" to="Kana/カ" method="_on_ToggleButton_pressed"]
-[connection signal="pressed" from="Kana/サ" to="Kana/サ" method="_on_ToggleButton_pressed"]
 [connection signal="pressed" from="ToKDakuten" to="ToKDakuten" method="_on_SceneButton_pressed"]
 [connection signal="pressed" from="EnableALL" to="." method="_on_EnableALL_pressed"]

@@ -72,9 +72,6 @@ margin_right = 89.0
 margin_bottom = 88.0
 texture = ExtResource( 6 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TileMap" type="TileMap" parent="."]
 cell_size = Vector2( 80, 48 )
