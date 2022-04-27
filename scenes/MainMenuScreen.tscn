@@ -13,6 +13,9 @@
 [node name="MainMenuScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -61,7 +64,7 @@ script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
-scene_path = "res://scenes/Level01.tscn"
+scene_path = "res://scenes/Level02.tscn"
 
 [node name="ScoreButton" type="Button" parent="."]
 anchor_left = 0.0351563

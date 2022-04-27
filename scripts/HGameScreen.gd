@@ -170,6 +170,7 @@ func generate_kanapool():
     print("Requested kana is "+choicepool[0])
 
 
+
 func _on_BackButton_pressed():
     get_tree().paused = false
     if get_tree().change_scene("res://scenes/GameOverSreen.tscn") != OK:

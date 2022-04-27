@@ -4,6 +4,7 @@ export(String,FILE) var scene_path:=""
 export(String) var node_path:=""
 var paused = true
 onready var pausescreen = get_node("PauseScreen")
+onready var backbutton = get_node("BackButton")
 func _ready():
     pause_mode = Node.PAUSE_MODE_PROCESS
 
@@ -15,3 +16,4 @@ func pausegame():
     paused = !paused
     get_tree().paused = paused
     pausescreen.visible = paused
+    backbutton.visible = paused
