@@ -191,12 +191,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BackButton" type="Button" parent="PauseButton/PauseScreen"]
+[node name="Shade" type="TextureRect" parent="PauseButton"]
 visible = false
-margin_left = -4.87756
-margin_top = 157.082
-margin_right = 363.122
-margin_bottom = 316.082
+show_behind_parent = true
+margin_left = -1357.83
+margin_top = -195.424
+margin_right = 562.167
+margin_bottom = 884.576
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="PauseButton"]
+visible = false
+margin_left = -570.633
+margin_top = 314.082
+margin_right = -202.633
+margin_bottom = 473.082
 icon = ExtResource( 12 )
 flat = true
 expand_icon = true
@@ -204,15 +216,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Shade" type="TextureRect" parent="PauseButton/PauseScreen"]
-show_behind_parent = true
-margin_left = -792.078
-margin_top = -352.424
-margin_right = 1127.92
-margin_bottom = 727.576
-texture = ExtResource( 13 )
-
 [connection signal="body_entered" from="TileMap/Basket" to="." method="_on_Basket_body_entered"]
 [connection signal="body_entered" from="TileMap/LoseBlock" to="." method="_on_LoseBlock_body_entered"]
 [connection signal="pressed" from="PauseButton" to="PauseButton" method="_on_PauseButton_pressed"]
-[connection signal="pressed" from="PauseButton/PauseScreen/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="PauseButton/BackButton" to="." method="_on_BackButton_pressed"]
