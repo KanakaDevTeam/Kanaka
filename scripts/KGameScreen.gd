@@ -191,8 +191,8 @@ func _on_Basket_body_entered(body):
     print("Kana "+body.kana+" caught!")
     if(body.kana == choicepool[0]):
         score += 1
-    if (rng(0,100) > 50): #50 percent chance of change kana
-        generate_kanapool()
+        if (rng(0,100) > 50): #50 percent chance of change kana
+            generate_kanapool()
     else:
         gameover()
     body.queue_free()

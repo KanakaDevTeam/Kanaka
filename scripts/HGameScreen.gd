@@ -5,7 +5,6 @@ export var gamemode = 0 #0 for hiragana, 1 for katakana
 const CONFIG_PATH = "res://etc/config.cfg"
 var config_file = ConfigFile.new()
 const COMPEN_PATH = "res://etc/hiraganacompen.cfg"
-#const COMPEN_PATH = "res://etc/katakanacompen.cfg"
 var compen_file = ConfigFile.new()
 const SCORE_PATH = "res://etc/scores.cfg"
 var score_file = ConfigFile.new()
@@ -37,7 +36,6 @@ var kanapool = ["あ","い","う","え","お","か","き","く","け","こ", \
                 "や","ゆ","よ","わ","を","が","ぎ","ぐ","げ","ご", \
                 "ざ","じ","ず","ぜ","ぞ","だ","ぢ","づ","で","ど", \
                 "ば","び","ぶ","べ","ぼ","ぱ","ぴ","ぷ","ぺ","ぽ","ん"]
-
 var tempool
 var validkana
 var choicepool = []
