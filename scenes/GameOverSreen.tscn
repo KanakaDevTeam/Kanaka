@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/Buttons_Sliders/Play Again.png" type="Texture" id=2]
 [ext_resource path="res://assets/Display/background.png" type="Texture" id=3]
 [ext_resource path="res://assets/3-20-Additions/Fonts/Kanaka_v2.tres" type="DynamicFont" id=4]
-[ext_resource path="res://scenes/GameOverSreen.gd" type="Script" id=5]
+[ext_resource path="res://scripts/GameOverSreen.gd" type="Script" id=5]
 [ext_resource path="res://scripts/ScreenSwitchButton.gd" type="Script" id=9]
 
 [node name="MainMenuScreen" type="Control"]
