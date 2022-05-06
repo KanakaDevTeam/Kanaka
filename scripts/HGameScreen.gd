@@ -28,6 +28,7 @@ var voiceRepeatControl = false
 
 var timer = 0
 var gentimer = 0
+var genthresh = 1
 var score = 0
 var kanapool = ["あ","い","う","え","お","か","き","く","け","こ", \
                 "さ","し","す","せ","そ","た","ち","つ","て","と", \
@@ -45,6 +46,7 @@ onready var leftblock = get_node("TileMap/LeftBlock")
 onready var rightblock = get_node("TileMap/RightBlock")
 onready var timerscreen = get_node("Timer")
 onready var kanalabel = get_node("KanaNext/Kanalabel")
+onready var lifesprite = [get_node("Life0"),get_node("Life1"),get_node("Life2")]
 
 var kanaConfig = {\
     "Kana/あ": 0, "Kana/い": 0, "Kana/う": 0, "Kana/え": 0, "Kana/お": 0, \
@@ -63,12 +65,17 @@ var kanaConfig = {\
     "Kana/ぱ": 0, "Kana/ぴ": 0, "Kana/ぷ": 0, "Kana/ぺ": 0, "Kana/ぽ": 0, \
     "Kana/ん": 0}
 
+var lives = 3
 var rand = RandomNumberGenerator.new()
 var kanascene = load("res://scenes/Kana.tscn")
 # program loads settings at bootup
 func _ready():
     score = 0
+    lives = 3
     load_config()
+    genthresh = 10*exp(-0.04*kanaFreq)+1
+    print("KanaFreq = "+str(kanaFreq))
+    print(genthresh)
     load_compendium()
     load_score()
     basket.update_lims(kanaLanes)
@@ -178,7 +185,7 @@ func _process(delta):
     timer += delta
     timerscreen.text = str((int(timer)-(int(timer)%60))/60)+":"+str(int(fmod(timer,60)))
     gentimer += delta
-    if gentimer > 1:
+    if gentimer > genthresh:
         generate_kana(choicepool[rng(0,len(choicepool)-1)])
         gentimer = 0
 
@@ -199,6 +206,9 @@ func _on_Basket_body_entered(body):
 
 func _on_LoseBlock_body_entered(body):
     if(body.kana == choicepool[0]):
+        lives -= 1
+        lifesprite[lives].visible = false
+    if lives < 0:
         gameover()
     body.queue_free()
 

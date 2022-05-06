@@ -89,8 +89,6 @@ custom_icons/grabber_disabled = ExtResource( 7 )
 custom_icons/grabber_highlight = ExtResource( 7 )
 custom_icons/grabber = ExtResource( 7 )
 custom_styles/slider = SubResource( 1 )
-min_value = 10.0
-max_value = 50.0
 value = 10.0
 __meta__ = {
 "_edit_use_anchors_": true

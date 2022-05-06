@@ -72,6 +72,39 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
+[node name="Life0" type="TextureRect" parent="."]
+margin_left = 100.0
+margin_top = 30.0
+margin_right = 160.0
+margin_bottom = 70.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Life1" type="TextureRect" parent="."]
+margin_left = 180.0
+margin_top = 30.0
+margin_right = 240.0
+margin_bottom = 70.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Life2" type="TextureRect" parent="."]
+margin_left = 260.0
+margin_top = 30.0
+margin_right = 320.0
+margin_bottom = 70.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="KanaNext" type="TextureRect" parent="."]
 margin_right = 89.0
 margin_bottom = 88.0
