@@ -64,7 +64,7 @@ anchor_bottom = 0.429884
 custom_colors/font_color = Color( 0.694118, 0.380392, 0.133333, 1 )
 custom_fonts/font = ExtResource( 4 )
 text = "Game Over
-Kana Caught: %d
+Required Kana: %d
 Time Elapsed: %d : %d
 "
 align = 1

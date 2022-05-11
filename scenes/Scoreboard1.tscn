@@ -28,10 +28,10 @@ __meta__ = {
 }
 
 [node name="Board" type="TextureRect" parent="."]
-anchor_left = 0.250591
-anchor_top = 0.206693
-anchor_right = 0.768169
-anchor_bottom = 0.80336
+anchor_left = 0.173828
+anchor_top = 0.206667
+anchor_right = 0.845703
+anchor_bottom = 0.893333
 texture = ExtResource( 6 )
 expand = true
 __meta__ = {
@@ -52,15 +52,32 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Score" type="Label" parent="Board/Gold"]
-margin_left = 86.0
-margin_top = 10.0
-margin_right = 277.0
-margin_bottom = 51.0
+[node name="TimeScore" type="Label" parent="Board/Gold"]
+anchor_left = 2.01012
+anchor_top = 0.122193
+anchor_right = 3.51471
+anchor_bottom = 0.814623
+margin_left = -1.52588e-05
+rect_pivot_offset = Vector2( 108.307, -0.363998 )
 custom_fonts/font = ExtResource( 9 )
 text = "13:37"
+align = 1
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
+}
+
+[node name="KanaScore" type="Label" parent="Board/Gold"]
+anchor_left = 4.81467
+anchor_top = 0.122193
+anchor_right = 5.48872
+anchor_bottom = 0.814623
+rect_pivot_offset = Vector2( 108.307, -0.363998 )
+custom_fonts/font = ExtResource( 9 )
+text = "15"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
 }
 
 [node name="Silver" type="TextureRect" parent="Board"]
@@ -74,18 +91,33 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Score" type="Label" parent="Board/Silver"]
-margin_left = 86.0
-margin_top = 10.0
-margin_right = 277.0
-margin_bottom = 51.0
+[node name="TimeScore" type="Label" parent="Board/Silver"]
+anchor_left = 2.01013
+anchor_top = 0.135771
+anchor_right = 3.51472
+anchor_bottom = 0.828201
 custom_fonts/font = ExtResource( 9 )
 text = "04:20"
+align = 1
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
-[node name="TextureRect" type="TextureRect" parent="Board"]
+[node name="KanaScore" type="Label" parent="Board/Silver"]
+anchor_left = 4.81468
+anchor_top = 0.135771
+anchor_right = 5.48874
+anchor_bottom = 0.828201
+margin_right = -3.05176e-05
+custom_fonts/font = ExtResource( 9 )
+text = "13"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Bronze" type="TextureRect" parent="Board"]
 anchor_left = 0.0494191
 anchor_top = 0.736059
 anchor_right = 0.170174
@@ -96,15 +128,31 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Score" type="Label" parent="Board/TextureRect"]
-margin_left = 86.0
-margin_top = 10.0
-margin_right = 277.0
-margin_bottom = 51.0
+[node name="TimeScore" type="Label" parent="Board/Bronze"]
+anchor_left = 2.01013
+anchor_top = 0.203656
+anchor_right = 3.51471
+anchor_bottom = 0.896086
+margin_left = -1.52588e-05
 custom_fonts/font = ExtResource( 9 )
 text = "03:14"
+align = 1
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
+}
+
+[node name="KanaScore" type="Label" parent="Board/Bronze"]
+anchor_left = 4.81467
+anchor_top = 0.203656
+anchor_right = 5.48873
+anchor_bottom = 0.896086
+margin_right = 3.05176e-05
+custom_fonts/font = ExtResource( 9 )
+text = "11"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
 }
 
 [node name="Back" type="Button" parent="."]
@@ -121,16 +169,29 @@ __meta__ = {
 }
 scene_path = "res://scenes/MainMenuScreen.tscn"
 
-[node name="Label" type="Label" parent="."]
-margin_left = 233.407
-margin_top = 488.631
-margin_right = 838.407
-margin_bottom = 634.631
+[node name="Time" type="Label" parent="."]
+anchor_left = 0.387695
+anchor_top = 0.118333
+anchor_right = 0.482422
+anchor_bottom = 0.208333
+custom_colors/font_color = Color( 0.694118, 0.380392, 0.133333, 1 )
 custom_fonts/font = ExtResource( 9 )
-text = "The big brown fox jumps
-over the lazy dog"
+text = "Time"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
+}
+
+[node name="KanaCaught" type="Label" parent="."]
+anchor_left = 0.556641
+anchor_top = 0.115
+anchor_right = 0.714844
+anchor_bottom = 0.2
+custom_colors/font_color = Color( 0.694118, 0.380392, 0.133333, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Caught"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
 }
 
 [connection signal="pressed" from="Back" to="Back" method="_on_SceneButton_pressed"]
