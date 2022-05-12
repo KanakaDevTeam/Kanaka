@@ -153,6 +153,12 @@ func _ready():
 	basket.update_lims(kanaLanes)
 	leftblock.position.x = 40 + (80 * basket.leftlim)
 	rightblock.position.x = 200 + (80 * basket.rightlim)
+	
+	if (assistMode):
+		$KanaNext.visible = true
+	else:
+		$KanaNext.visible = false
+	
 	print("Game is ready!")
 	#print(generate_correcthiragana())
 	#print(generate_correctkatakana())
@@ -279,9 +285,17 @@ func _on_Basket_body_entered(body):
 		score += 1
 		if (rng(0,100) > 50): #50 percent chance of change kana
 			generate_kanapool()
+			
+		if (voiceRepeatControl):
+			var KanaSound1 = AudioStreamPlayer.new()
+			add_child(KanaSound1)
+			KanaSound1.stream = kanaDirectory[choicepool[0]]
+			KanaSound1.play()
+			yield(KanaSound1, "finished")
+			remove_child(KanaSound1)
 	else:
 		gameover()
-	body.queue_free()
+	#body.queue_free()
 
 func _on_LoseBlock_body_entered(body):
 	if(body.kana == choicepool[0]):

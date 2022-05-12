@@ -111,6 +111,9 @@ func _on_TutorialButton_pressed():
 
 func _on_AssistButton_pressed():
 	assistMode = !assistMode
+	
+	
+	
 	print("Assist Mode = "+str(assistMode))
 
 func _on_VoiceRepeatButton_pressed():

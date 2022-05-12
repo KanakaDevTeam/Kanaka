@@ -113,9 +113,6 @@ margin_right = 89.0
 margin_bottom = 88.0
 texture = ExtResource( 6 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Kanalabel" type="Label" parent="KanaNext"]
 margin_right = 90.0
