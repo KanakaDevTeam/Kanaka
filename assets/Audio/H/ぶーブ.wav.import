@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ぶーブ.wav-c4adda2b686c29bb5dec2c84f3fde97c.sample"
+
+[deps]
+
+source_file="res://assets/Audio/H/ぶーブ.wav"
+dest_files=[ "res://.import/ぶーブ.wav-c4adda2b686c29bb5dec2c84f3fde97c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

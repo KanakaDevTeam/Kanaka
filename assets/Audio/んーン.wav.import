@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/んーン.wav-132514b59d9f3aa7177936985c07f5dc.sample"
+
+[deps]
+
+source_file="res://assets/Audio/んーン.wav"
+dest_files=[ "res://.import/んーン.wav-132514b59d9f3aa7177936985c07f5dc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
