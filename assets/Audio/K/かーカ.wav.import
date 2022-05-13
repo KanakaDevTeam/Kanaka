@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/かーカ.wav-4754c7f8d86803c265c0c10561a2719c.sample"
+
+[deps]
+
+source_file="res://assets/Audio/K/かーカ.wav"
+dest_files=[ "res://.import/かーカ.wav-4754c7f8d86803c265c0c10561a2719c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/めーメ.wav-c13dc2827b43e511adc6e53bc2b817cd.sample"
+
+[deps]
+
+source_file="res://assets/Audio/M/めーメ.wav"
+dest_files=[ "res://.import/めーメ.wav-c13dc2827b43e511adc6e53bc2b817cd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

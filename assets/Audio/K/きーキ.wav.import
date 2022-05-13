@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/きーキ.wav-e3da2bb4e7263be71c514874168c7eba.sample"
+
+[deps]
+
+source_file="res://assets/Audio/K/きーキ.wav"
+dest_files=[ "res://.import/きーキ.wav-e3da2bb4e7263be71c514874168c7eba.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

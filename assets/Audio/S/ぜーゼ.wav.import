@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ぜーゼ.wav-35754c0d896dff8b2aa72656c954dc46.sample"
+
+[deps]
+
+source_file="res://assets/Audio/S/ぜーゼ.wav"
+dest_files=[ "res://.import/ぜーゼ.wav-35754c0d896dff8b2aa72656c954dc46.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

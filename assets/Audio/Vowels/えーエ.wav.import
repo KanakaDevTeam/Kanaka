@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/えーエ.wav-386a494d8ce7250f7d7f7fd3627d26ca.sample"
+
+[deps]
+
+source_file="res://assets/Audio/Vowels/えーエ.wav"
+dest_files=[ "res://.import/えーエ.wav-386a494d8ce7250f7d7f7fd3627d26ca.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

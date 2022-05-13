@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/わーワ.wav-d3b31f8d4858e0d6f564025a91dba7a0.sample"
+
+[deps]
+
+source_file="res://assets/Audio/W/わーワ.wav"
+dest_files=[ "res://.import/わーワ.wav-d3b31f8d4858e0d6f564025a91dba7a0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

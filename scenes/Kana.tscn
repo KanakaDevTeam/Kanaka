@@ -9,7 +9,8 @@ radius = 24.5967
 
 [sub_resource type="DynamicFont" id=2]
 size = 32
-outline_color = Color( 0.968627, 1, 0, 1 )
+outline_size = 2
+outline_color = Color( 0.11084, 0.0793423, 0.00779343, 1 )
 font_data = ExtResource( 3 )
 
 [node name="Kana" type="KinematicBody2D"]
@@ -34,6 +35,3 @@ text = "A"
 align = 1
 valign = 1
 max_lines_visible = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}

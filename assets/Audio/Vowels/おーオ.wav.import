@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/おーオ.wav-7874d99835ebaf1c3c32109e7a883436.sample"
+
+[deps]
+
+source_file="res://assets/Audio/Vowels/おーオ.wav"
+dest_files=[ "res://.import/おーオ.wav-7874d99835ebaf1c3c32109e7a883436.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -17,7 +17,9 @@
 [ext_resource path="res://assets/3-20-Additions/Fonts/Kanaka_v2.tres" type="DynamicFont" id=15]
 
 [sub_resource type="DynamicFont" id=6]
-size = 48
+size = 64
+outline_size = 3
+outline_color = Color( 1, 0.682353, 0.0941176, 1 )
 font_data = ExtResource( 10 )
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -122,9 +124,6 @@ text = "A"
 align = 1
 valign = 1
 max_lines_visible = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TileMap" type="TileMap" parent="."]
 cell_size = Vector2( 80, 48 )

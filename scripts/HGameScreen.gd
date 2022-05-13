@@ -65,25 +65,105 @@ var kanaConfig = {\
 	"Kana/ぱ": 0, "Kana/ぴ": 0, "Kana/ぷ": 0, "Kana/ぺ": 0, "Kana/ぽ": 0, \
 	"Kana/ん": 0}
 
+var kanaDirectory = {\
+	"あ" : preload("res://assets/Audio/Vowels/あーア.wav"), \
+	"い" : preload("res://assets/Audio/Vowels/いーイ.wav"), \
+	"う" : preload("res://assets/Audio/Vowels/うーウ.wav"), \
+	"え" : preload("res://assets/Audio/Vowels/えーエ.wav"), \
+	"お" : preload("res://assets/Audio/Vowels/おーオ.wav"), \
+	"か" : preload("res://assets/Audio/K/かーカ.wav"), \
+	"き" : preload("res://assets/Audio/K/きーキ.wav"), \
+	"く" : preload("res://assets/Audio/K/くーク.wav"), \
+	"け" : preload("res://assets/Audio/K/けーケ.wav"), \
+	"こ" : preload("res://assets/Audio/K/こーコ.wav"), \
+	"さ" : preload("res://assets/Audio/S/さーサ.wav"), \
+	"し" : preload("res://assets/Audio/S/しーシ.wav"), \
+	"す" : preload("res://assets/Audio/S/すース.wav"), \
+	"せ" : preload("res://assets/Audio/S/せーセ.wav"), \
+	"そ" : preload("res://assets/Audio/S/そーソ.wav"), \
+	"た" : preload("res://assets/Audio/T/たータ.wav"), \
+	"ち" : preload("res://assets/Audio/T/ちーチ.wav"), \
+	"つ" : preload("res://assets/Audio/T/つーツ.wav"), \
+	"て" : preload("res://assets/Audio/T/てーテ.wav"), \
+	"と" : preload("res://assets/Audio/T/とート.wav"), \
+	"な" : preload("res://assets/Audio/N/なーナ.wav"), \
+	"に" : preload("res://assets/Audio/N/にーニ.wav"), \
+	"ぬ" : preload("res://assets/Audio/N/ぬーヌ.wav"), \
+	"ね" : preload("res://assets/Audio/N/ねーネ.wav"), \
+	"の" : preload("res://assets/Audio/N/のーノ.wav"), \
+	"は" : preload("res://assets/Audio/H/はーハ.wav"), \
+	"ひ" : preload("res://assets/Audio/H/ひーヒ.wav"), \
+	"ふ" : preload("res://assets/Audio/H/ふーフ.wav"), \
+	"へ" : preload("res://assets/Audio/H/へーヘ.wav"), \
+	"ほ" : preload("res://assets/Audio/H/ほーホ.wav"), \
+	"ま" : preload("res://assets/Audio/M/まーマ.wav"), \
+	"み" : preload("res://assets/Audio/M/みーミ.wav"), \
+	"む" : preload("res://assets/Audio/M/むーム.wav"), \
+	"め" : preload("res://assets/Audio/M/めーメ.wav"), \
+	"も" : preload("res://assets/Audio/M/もーモ.wav"), \
+	"ら" : preload("res://assets/Audio/R/らーラ.wav"), \
+	"り" : preload("res://assets/Audio/R/りーリ.wav"), \
+	"る" : preload("res://assets/Audio/R/るール.wav"), \
+	"れ" : preload("res://assets/Audio/R/れーレ.wav"), \
+	"ろ" : preload("res://assets/Audio/R/ろーロ.wav"), \
+	"や" : preload("res://assets/Audio/Y/やーヤ.wav"), \
+	"ゆ" : preload("res://assets/Audio/Y/ゆーユ.wav"), \
+	"よ" : preload("res://assets/Audio/Y/よーヨ.wav"), \
+	"わ" : preload("res://assets/Audio/W/わーワ.wav"), \
+	"を" : preload("res://assets/Audio/W/をーヲ.wav"), \
+	"が" : preload("res://assets/Audio/K/がーガ.wav"), \
+	"ぎ" : preload("res://assets/Audio/K/ぎーギ.wav"), \
+	"ぐ" : preload("res://assets/Audio/K/ぐーグ.wav"), \
+	"げ" : preload("res://assets/Audio/K/げーゲ.wav"), \
+	"ご" : preload("res://assets/Audio/K/ごーゴ.wav"), \
+	"ざ" : preload("res://assets/Audio/S/ざーザ.wav"), \
+	"じ" : preload("res://assets/Audio/S/じージ.wav"), \
+	"ず" : preload("res://assets/Audio/S/ずーズ.wav"), \
+	"ぜ" : preload("res://assets/Audio/S/ぜーゼ.wav"), \
+	"ぞ" : preload("res://assets/Audio/S/ぞーゾ.wav"), \
+	"だ" : preload("res://assets/Audio/T/だーダ.wav"), \
+	"ぢ" : preload("res://assets/Audio/T/ぢーヂ.wav"), \
+	"づ" : preload("res://assets/Audio/T/づーヅ.wav"), \
+	"で" : preload("res://assets/Audio/T/でーデ.wav"), \
+	"ど" : preload("res://assets/Audio/T/どード.wav"), \
+	"ば" : preload("res://assets/Audio/H/ばーバ.wav"), \
+	"び" : preload("res://assets/Audio/H/びービ.wav"), \
+	"ぶ" : preload("res://assets/Audio/H/ぶーブ.wav"), \
+	"べ" : preload("res://assets/Audio/H/べーベ.wav"), \
+	"ぼ" : preload("res://assets/Audio/H/ぼーボ.wav"), \
+	"ぱ" : preload("res://assets/Audio/H/ぱーパ.wav"), \
+	"ぴ" : preload("res://assets/Audio/H/ぴーピ.wav"), \
+	"ぷ" : preload("res://assets/Audio/H/ぷープ.wav"), \
+	"ぺ" : preload("res://assets/Audio/H/ぺーペ.wav"), \
+	"ぽ" : preload("res://assets/Audio/H/ぽーポ.wav"), \
+	"ん" : preload("res://assets/Audio/んーン.wav"), \
+	}
+
 var lives = 3
 var rand = RandomNumberGenerator.new()
 var kanascene = load("res://scenes/Kana.tscn")
 # program loads settings at bootup
 func _ready():
-    score = 0
-    lives = 3
-    load_config()
-    genthresh = 10*exp(-0.04*kanaFreq)+1
-    print("KanaFreq = "+str(kanaFreq))
-    print(genthresh)
-    load_compendium()
-    load_score()
-    basket.update_lims(kanaLanes)
-    leftblock.position.x = 40 + (80 * basket.leftlim)
-    rightblock.position.x = 200 + (80 * basket.rightlim)
-    print("Game is ready!")
-    #print(generate_correcthiragana())
-    #print(generate_correctkatakana())
+	score = 0
+	lives = 3
+	load_config()
+	genthresh = 10*exp(-0.04*kanaFreq)+1
+	print("KanaFreq = "+str(kanaFreq))
+	print(genthresh)
+	load_compendium()
+	load_score()
+	basket.update_lims(kanaLanes)
+	leftblock.position.x = 40 + (80 * basket.leftlim)
+	rightblock.position.x = 200 + (80 * basket.rightlim)
+	
+	if (assistMode):
+		$KanaNext.visible = true
+	else:
+		$KanaNext.visible = false
+	
+	print("Game is ready!")
+	#print(generate_correcthiragana())
+	#print(generate_correctkatakana())
 
 func load_config():
 	if config_file.load(CONFIG_PATH) != OK:
@@ -173,6 +253,15 @@ func generate_kanapool():
 		choicepool.append(tempool.pop_at(rng(0,len(tempool)-1)))
 	kanalabel.text = choicepool[0]
 	print("Requested kana is "+choicepool[0])
+	#$KanaNext/KanaAudio.play()
+	
+	var KanaSound = AudioStreamPlayer.new()
+	add_child(KanaSound)
+	KanaSound.stream = kanaDirectory[choicepool[0]]
+	KanaSound.play()
+	
+	yield(KanaSound, "finished")
+	remove_child(KanaSound)
 
 
 
@@ -182,12 +271,12 @@ func _on_BackButton_pressed():
 		print("Error: Unable to change the scene.")
 
 func _process(delta):
-    timer += delta
-    timerscreen.text = str((int(timer)-(int(timer)%60))/60)+":"+str(int(fmod(timer,60)))
-    gentimer += delta
-    if gentimer > genthresh:
-        generate_kana(choicepool[rng(0,len(choicepool)-1)])
-        gentimer = 0
+	timer += delta
+	timerscreen.text = str((int(timer)-(int(timer)%60))/60)+":"+str(int(fmod(timer,60)))
+	gentimer += delta
+	if gentimer > genthresh:
+		generate_kana(choicepool[rng(0,len(choicepool)-1)])
+		gentimer = 0
 
 func rng(a,b):
 		rand.randomize()
@@ -200,17 +289,25 @@ func _on_Basket_body_entered(body):
 		score += 1
 		if (rng(0,100) > 50): #50 percent chance of change kana
 			generate_kanapool()
+		
+		if (voiceRepeatControl):
+			var KanaSound1 = AudioStreamPlayer.new()
+			add_child(KanaSound1)
+			KanaSound1.stream = kanaDirectory[choicepool[0]]
+			KanaSound1.play()
+			yield(KanaSound1, "finished")
+			remove_child(KanaSound1)
 	else:
 		gameover()
-	body.queue_free()
+#	body.queue_free()
 
 func _on_LoseBlock_body_entered(body):
-    if(body.kana == choicepool[0]):
-        lives -= 1
-        lifesprite[lives].visible = false
-    if lives < 0:
-        gameover()
-    body.queue_free()
+	if(body.kana == choicepool[0]):
+		lives -= 1
+		lifesprite[lives].visible = false
+	if lives < 0:
+		gameover()
+	body.queue_free()
 
 func gameover():
 	#insert score code here
