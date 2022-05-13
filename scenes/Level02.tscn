@@ -112,9 +112,6 @@ margin_right = 89.0
 margin_bottom = 88.0
 texture = ExtResource( 6 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Kanalabel" type="Label" parent="KanaNext"]
 margin_right = 90.0
@@ -124,6 +121,8 @@ text = "A"
 align = 1
 valign = 1
 max_lines_visible = 1
+
+[node name="KanaAudio" type="AudioStreamPlayer" parent="KanaNext"]
 
 [node name="TileMap" type="TileMap" parent="."]
 cell_size = Vector2( 80, 48 )

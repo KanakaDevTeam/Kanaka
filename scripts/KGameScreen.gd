@@ -239,32 +239,29 @@ func generate_kana(kana):
     newkana.update_label(kana)
 
 func generate_kanapool():
-    choicepool = []
-    #duplicate kana list
-    tempool = kanapool.duplicate()
-    #generates initial kana
-    choicepool.append(validkana[rng(0, len(validkana)-1)])
-    print(choicepool[0])
-    tempool.erase(choicepool[0])
-    #generate 3 different kana
-    for _i in range(3):
-        choicepool.append(tempool.pop_at(rng(0,len(tempool)-1)))
-    kanalabel.text = choicepool[0]
-    print("Requested kana is "+choicepool[0])
+	choicepool = []
+	#duplicate kana list
+	tempool = kanapool.duplicate()
+	#generates initial kana
+	choicepool.append(validkana[rng(0, len(validkana)-1)])
+	print(choicepool[0])
+	tempool.erase(choicepool[0])
+	#generate 3 different kana
+	for _i in range(3):
+		choicepool.append(tempool.pop_at(rng(0,len(tempool)-1)))
+	kanalabel.text = choicepool[0]
+	print("Requested kana is "+choicepool[0])
+	
+	$KanaNext/KanaAudio.stream = kanaDirectory[choicepool[0]]
+	$KanaNext/KanaAudio.play()
 
-    var KanaSound = AudioStreamPlayer.new()
-    add_child(KanaSound)
-    KanaSound.stream = kanaDirectory[choicepool[0]]
-    KanaSound.play()
-
-    yield(KanaSound, "finished")
-    remove_child(KanaSound)
 
 
 func _on_BackButton_pressed():
-    get_tree().paused = false
-    if get_tree().change_scene("res://scenes/MainMenuSreen.tscn") != OK:
-        print("Error: Unable to change the scene.")
+	get_tree().paused = false
+	if get_tree().change_scene("res://scenes/MainMenuScreen.tscn") != OK:
+		print("Error: Unable to change the scene.")
+
 
 func _process(delta):
     timer += delta
@@ -280,22 +277,18 @@ func rng(a,b):
 
 
 func _on_Basket_body_entered(body):
-    print("Kana "+body.kana+" caught!")
-    if(body.kana == choicepool[0]):
-        score += 1
-        if (rng(0,100) > 50): #50 percent chance of change kana
-            generate_kanapool()
+	print("Kana "+body.kana+" caught!")
+	if(body.kana == choicepool[0]):
+		score += 1
+		if (rng(0,100) > 50): #50 percent chance of change kana
+			generate_kanapool()
+			
+		if (voiceRepeatControl):
+			$KanaNext/KanaAudio.play()
+	else:
+		gameover()
+	body.queue_free()
 
-        if (voiceRepeatControl):
-            var KanaSound1 = AudioStreamPlayer.new()
-            add_child(KanaSound1)
-            KanaSound1.stream = kanaDirectory[choicepool[0]]
-            KanaSound1.play()
-            yield(KanaSound1, "finished")
-            remove_child(KanaSound1)
-    else:
-        gameover()
-    body.queue_free()
 
 func _on_LoseBlock_body_entered(body):
     if(body.kana == choicepool[0]):
