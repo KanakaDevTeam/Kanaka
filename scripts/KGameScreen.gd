@@ -252,18 +252,14 @@ func generate_kanapool():
 	kanalabel.text = choicepool[0]
 	print("Requested kana is "+choicepool[0])
 	
-	var KanaSound = AudioStreamPlayer.new()
-	add_child(KanaSound)
-	KanaSound.stream = kanaDirectory[choicepool[0]]
-	KanaSound.play()
-	
-	yield(KanaSound, "finished")
-	remove_child(KanaSound)
+	$KanaNext/KanaAudio.stream = kanaDirectory[choicepool[0]]
+	$KanaNext/KanaAudio.play()
+
 
 
 func _on_BackButton_pressed():
 	get_tree().paused = false
-	if get_tree().change_scene("res://scenes/MainMenuSreen.tscn") != OK:
+	if get_tree().change_scene("res://scenes/MainMenuScreen.tscn") != OK:
 		print("Error: Unable to change the scene.")
 
 func _process(delta):
@@ -287,15 +283,10 @@ func _on_Basket_body_entered(body):
 			generate_kanapool()
 			
 		if (voiceRepeatControl):
-			var KanaSound1 = AudioStreamPlayer.new()
-			add_child(KanaSound1)
-			KanaSound1.stream = kanaDirectory[choicepool[0]]
-			KanaSound1.play()
-			yield(KanaSound1, "finished")
-			remove_child(KanaSound1)
+			$KanaNext/KanaAudio.play()
 	else:
 		gameover()
-	#body.queue_free()
+	body.queue_free()
 
 func _on_LoseBlock_body_entered(body):
 	if(body.kana == choicepool[0]):
