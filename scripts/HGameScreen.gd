@@ -241,28 +241,27 @@ func generate_kana(kana):
     newkana.update_label(kana)
 
 func generate_kanapool():
-	choicepool = []
-	#duplicate kana list
-	tempool = kanapool.duplicate()
-	#generates initial kana
-	choicepool.append(validkana[rng(0, len(validkana)-1)])
-	print(choicepool[0])
-	tempool.erase(choicepool[0])
-	#generate 3 different kana
-	for _i in range(3):
-		choicepool.append(tempool.pop_at(rng(0,len(tempool)-1)))
-	kanalabel.text = choicepool[0]
-	print("Requested kana is "+choicepool[0])
-	
-	$KanaNext/KanaAudio.stream = kanaDirectory[choicepool[0]]
-	$KanaNext/KanaAudio.play()
+    choicepool = []
+    #duplicate kana list
+    tempool = kanapool.duplicate()
+    #generates initial kana
+    choicepool.append(validkana[rng(0, len(validkana)-1)])
+    print(choicepool[0])
+    tempool.erase(choicepool[0])
+    #generate 3 different kana
+    for _i in range(3):
+        choicepool.append(tempool.pop_at(rng(0,len(tempool)-1)))
+    kanalabel.text = choicepool[0]
+    print("Requested kana is "+choicepool[0])
 
+    $KanaNext/KanaAudio.stream = kanaDirectory[choicepool[0]]
+    $KanaNext/KanaAudio.play()
 
 
 
 func _on_BackButton_pressed():
     get_tree().paused = false
-    if get_tree().change_scene("res://scenes/GameOverSreen.tscn") != OK:
+    if get_tree().change_scene("res://scenes/HGameOverScreen.tscn") != OK:
         print("Error: Unable to change the scene.")
 
 func _process(delta):
@@ -279,17 +278,17 @@ func rng(a,b):
 
 
 func _on_Basket_body_entered(body):
-	print("Kana "+body.kana+" caught!")
-	if(body.kana == choicepool[0]):
-		score += 1
-		if (rng(0,100) > 50): #50 percent chance of change kana
-			generate_kanapool()
-		
-		if (voiceRepeatControl):
-			$KanaNext/KanaAudio.play()
-	else:
-		gameover()
-	body.queue_free()
+    print("Kana "+body.kana+" caught!")
+    if(body.kana == choicepool[0]):
+        score += 1
+        if (rng(0,100) > 50): #50 percent chance of change kana
+            generate_kanapool()
+
+        if (voiceRepeatControl):
+            $KanaNext/KanaAudio.play()
+    else:
+        gameover()
+    body.queue_free()
 
 
 func _on_LoseBlock_body_entered(body):
@@ -315,7 +314,7 @@ func gameover():
     if score_file.save(SCORE_PATH) != OK:
         print("Error: Unable to save recent score.")
 
-    if get_tree().change_scene(next_scene_path) != OK:
+    if get_tree().change_scene("res://scenes/HGameOverScreen.tscn") != OK:
         print("Error: missing next_scene_path")
 
 func initscore():
